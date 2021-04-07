@@ -46,5 +46,8 @@ public class Player implements ActionListener{
 		if(playerHand == 1)Panel.contentsLabel.setText("グー");
 		if(playerHand == 2)Panel.contentsLabel.setText("チョキ");
 		if(playerHand == 3)Panel.contentsLabel.setText("パー");
+		int computerHand =Computer.decidesComputerHand();
+		VictoryOrDefeat.decisionVictoryOrDefeat(computerHand, playerHand);
+		
 	}
 }
