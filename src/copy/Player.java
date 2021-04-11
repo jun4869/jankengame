@@ -43,6 +43,7 @@ public class Player implements ActionListener{
 		else if(command.equals("チョキ"))playerHand = 2;
 		else if(command.equals("パー"))playerHand = 3;
 		
+		Panel.contentsLabel.setIcon(null);
 		if(playerHand == 1)Panel.contentsLabel.setText("グー");
 		if(playerHand == 2)Panel.contentsLabel.setText("チョキ");
 		if(playerHand == 3)Panel.contentsLabel.setText("パー");

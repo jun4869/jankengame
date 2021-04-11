@@ -5,6 +5,7 @@ import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;
 
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -13,10 +14,11 @@ public class Panel {
 	public static JLabel headerLabel;
 	public static JLabel contentsLabel;
 	public static void createPanel(JFrame frame) {
+		ImageIcon icon1 = new ImageIcon("ダウンロード.jpg");
 		//ヘッダーパネル
 		Dimension headerPanelDimension = new Dimension(640, 50);
 		JPanel headerPanel = setPanel(Color.BLACK, headerPanelDimension);
-		headerLabel = new JLabel("「さあ、　じゃんけんで勝負だ！」");
+		headerLabel = new JLabel("じゃんけんだ！");
 		headerLabel = setFont(Color.WHITE,headerLabel,24);
 		headerPanel.add(headerLabel);
 		frame.add(headerPanel, BorderLayout.NORTH);
@@ -24,7 +26,7 @@ public class Panel {
 		//コンテンツパネル
 		Dimension contentsPanelDimension = new Dimension(640,380);
 		JPanel contensPanel = setPanel(Color.WHITE, contentsPanelDimension);
-		contentsLabel = new JLabel("じゃんけん・・・");
+		contentsLabel = new JLabel(icon1);
 		contentsLabel = setFont(Color.BLACK,contentsLabel,54);
 		contensPanel.add(contentsLabel);
 		frame.add(contensPanel,BorderLayout.CENTER);

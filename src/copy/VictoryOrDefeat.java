@@ -7,15 +7,15 @@ public class VictoryOrDefeat {
 		playerHandTemp++;
 		
 		if(playerHand == computerHand) {
-			Panel.headerLabel.setText("もう一度！");
+			Panel.headerLabel.setText("あいこ");
 		}
 		else if((playerHand == 3 && computerHand == 1)||(playerHandTemp == computerHand)) {
 			point+=1;
-			Panel.headerLabel.setText("お前の勝ちだ！" + point +("連勝中！")+ " ");
+			Panel.headerLabel.setText("勝ち！" + point +("連勝中！")+ " ");
 		}
 		else {
 			point = 0;
-			Panel.headerLabel.setText("お前の負けだ！");
+			Panel.headerLabel.setText("負け！");
 		}
 	}
 }
